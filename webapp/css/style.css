@@ -1,0 +1,12 @@
+html[dir='ltr'] .appDemo .customBtn.sapMBtn {
+  margin-right: 0.2rem;
+}
+
+html[dir='rtl'] .appDemo .customBtn.sapMBtn {
+  margin-left: 0.2rem;
+}
+
+.appDemo .customText {
+  display: inline-block;
+  font-weight: bold;
+}
