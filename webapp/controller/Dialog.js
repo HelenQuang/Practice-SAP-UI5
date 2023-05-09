@@ -3,7 +3,7 @@ sap.ui.define(
   function (ManagedObject, Fragment) {
     'use strict';
 
-    return ManagedObject.extend('sap.ui.walkthrough.controller.Dialog', {
+    return ManagedObject.extend('sap.ui.demo.walkthrough.controller.Dialog', {
       constructor: function (oView) {
         this._oView = oView;
       },
