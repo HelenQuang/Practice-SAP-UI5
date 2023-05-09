@@ -16,26 +16,7 @@ sap.ui.define(
       },
 
       onOpenDialog: function () {
-        const oView = this.getView();
-
-        //Create dialog
-        if (!this.byId('Dialog')) {
-          //Load asynchronously dialog XML fragment
-          Fragment.load({
-            id: oView.getId(),
-            name: 'sap.ui.demo.walkthrough.view.Dialog',
-            controller: this,
-          }).then(function (oDialog) {
-            oView.addDependent(oDialog);
-            oDialog.open();
-          });
-        } else {
-          this.byId('Dialog').open();
-        }
-      },
-
-      onCloseDialog: function () {
-        this.byId('Dialog').close();
+        this.getOwnerComponent().openDialog();
       },
     });
   }

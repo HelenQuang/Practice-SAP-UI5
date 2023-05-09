@@ -8,6 +8,9 @@
     <App class="appDemo">
         <pages>
             <Page title="{i18n>homePageTitle}">
+                <headerContent>
+                     <Button press=".onOpenDialog" icon="sap-icon://heart" />
+                </headerContent>
                 <content>
                     <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
                 </content>

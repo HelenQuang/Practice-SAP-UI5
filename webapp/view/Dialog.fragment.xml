@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
   <Dialog id="Dialog" title="Moi moi {/recipient/name}!">
     <content>
-      <core:Icon src="sap-icon://discussion"/>
+      <core:Icon src="sap-icon://discussion" size="8rem" class="sapUiMediumMargin"/>
     </content>
 
     <beginButton>
