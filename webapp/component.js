@@ -4,8 +4,9 @@ sap.ui.define(
     'sap/ui/model/json/JSONModel',
     'sap/ui/model/resource/ResourceModel',
     './controller/Dialog',
+    'sap/ui/Device',
   ],
-  function (UIComponent, JSONModel, ResourceModel, Dialog) {
+  function (UIComponent, JSONModel, ResourceModel, Dialog, Device) {
     'use strict';
 
     return UIComponent.extend('sap.ui.demo.walkthrough.Component', {
@@ -31,6 +32,11 @@ sap.ui.define(
 
         //Create the view
         this.getRouter().initialize();
+
+        //Set device model
+        const oDeviceModel = new JSONModel(Device);
+        oDeviceModel.setDefaultBindingMode('OneWay');
+        this.setModel(oDeviceModel, 'device');
       },
 
       exit: function () {
