@@ -3,7 +3,7 @@ sap.ui.define(
   function (Opa5, Press) {
     'use strict';
 
-    var sViewName = 'sap.ui.demo.walkthrough.view.HelloPanel';
+    const sViewName = 'sap.ui.demo.walkthrough.view.HelloPanel';
 
     Opa5.createPageObjects({
       onTheAppPage: {

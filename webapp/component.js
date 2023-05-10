@@ -18,16 +18,19 @@ sap.ui.define(
         UIComponent.prototype.init.apply(this, arguments);
 
         // Set data JSON models
-        var oData = {
+        const oData = {
           recipient: {
             name: 'Helen Quang',
           },
         };
-        var oModel = new JSONModel(oData);
+        const oModel = new JSONModel(oData);
         this.setModel(oModel);
 
         //Set dialog
         this._dialog = new Dialog(this.getRootControl());
+
+        //Create the view
+        this.getRouter().initialize();
       },
 
       exit: function () {

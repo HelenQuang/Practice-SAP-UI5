@@ -11,7 +11,7 @@ sap.ui.define(
 
     return Controller.extend('sap.ui.demo.walkthrough.controller.InvoiceList', {
       onInit: function () {
-        var oViewModel = new JSONModel({
+        const oViewModel = new JSONModel({
           currency: 'EUR',
         });
         this.getView().setModel(oViewModel, 'view');
@@ -31,6 +31,10 @@ sap.ui.define(
         const oList = this.byId('invoiceList');
         const oBinding = oList.getBinding('items');
         oBinding.filter(aFilter);
+      },
+      onPress: function (oEvent) {
+        const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        oRouter.navTo('detail');
       },
     });
   }
