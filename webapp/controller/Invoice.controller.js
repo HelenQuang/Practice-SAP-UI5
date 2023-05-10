@@ -1,6 +1,10 @@
 sap.ui.define(
-  ['sap/ui/core/mvc/Controller', 'sap/ui/model/json/JSONModel'],
-  function (Controller, JSONModel) {
+  [
+    'sap/ui/core/mvc/Controller',
+    'sap/ui/model/json/JSONModel',
+    '../model/Formatter',
+  ],
+  function (Controller, JSONModel, Formatter) {
     'use strict';
 
     return Controller.extend('sap.ui.demo.walkthrough.controller.InvoiceList', {
@@ -10,6 +14,7 @@ sap.ui.define(
         });
         this.getView().setModel(oViewModel, 'view');
       },
+      formatter: Formatter,
     });
   }
 );
