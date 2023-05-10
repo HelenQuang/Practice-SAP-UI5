@@ -16,7 +16,9 @@ sap.ui.define(
         });
         this.getView().setModel(oViewModel, 'view');
       },
+
       formatter: Formatter,
+
       onFilterInvoices: function (oEvent) {
         //Build filter array based on query input
         const aFilter = [];
@@ -32,9 +34,15 @@ sap.ui.define(
         const oBinding = oList.getBinding('items');
         oBinding.filter(aFilter);
       },
+
       onPress: function (oEvent) {
+        const oItem = oEvent.getSource();
         const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-        oRouter.navTo('detail');
+        oRouter.navTo('detail', {
+          invoicePath: window.encodeURIComponent(
+            oItem.getBindingContext('invoice').getPath().substr(1)
+          ),
+        });
       },
     });
   }
